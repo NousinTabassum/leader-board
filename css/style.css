@@ -25,6 +25,12 @@ body {
 
 }
 
+.top-course {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
 .player,
 .blog {
     display: flex;
@@ -45,6 +51,7 @@ body {
 .top-blog {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 26px;
 }
 
 .blog img {
@@ -68,7 +75,8 @@ body {
 }
 
 .course {
-    box-shadow: 3px 3px lightgray;
+    box-shadow: 0px 5.342289924621582px 13.35572338104248px 0px #0000000D;
+
     margin: 20px;
     display: flex;
     border-radius: 5px;
@@ -79,5 +87,62 @@ body {
 
 .course img {
     width: 85%;
+
+}
+
+.filled {
+    color: goldenrod;
+}
+
+.empty {
+    color: #A2A2A2;
+}
+
+.clock {
+    margin-left: 35px;
+    color: #FF4A60;
+    background-color: #FFE4E8;
+    border-radius: 15px;
+
+}
+
+/* --------------
+  media quary
+----------------- */
+@media screen and (max-width:576px) {
+    .top-player {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .top-course {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .top-blog {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 26px;
+    }
+
+
+}
+
+@media screen and (min-width:577px) and (max-width:768px) {
+    .top-player {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .top-course {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .top-blog {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 26px;
+    }
+
 
 }
